@@ -1,0 +1,23 @@
+Enhanced OCR - Versão COMPLETA
+================================
+
+Versão: 3.0 Complete with Searchable PDF
+Data: 2024  
+Autor: Enhanced com Claude Code
+
+FUNCIONALIDADES:
+✅ OCR Local (Tesseract)
+✅ OCR Cloud (Mistral AI)
+✅ PDF Pesquisável (NOVO!)
+✅ Múltiplos formatos de saída
+✅ Modo híbrido e privacidade
+✅ Interface gráfica completa
+✅ Processamento em lote
+✅ Estatísticas em tempo real
+
+NOVIDADES DESTA VERSÃO:
+🔥 Geração de PDF pesquisável
+🔥 Texto selecionável e copiável  
+🔥 Pesquisa com Ctrl+F funciona
+🔥 Preserva aparência original
+🔥 Compatível com todos os visualizadores
