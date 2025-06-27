@@ -180,5 +180,3 @@ A aplicação mostra em tempo real:
    - `documento_OCR_completo.json`
    - `documento_OCR.md`
    - `documento_pesquisavel.pdf` ← **NOVO!**
-
-Esta funcionalidade transforma seus PDFs "mortos" em documentos **vivos e pesquisáveis**! 🎉
