@@ -1,0 +1,147 @@
+================================================================================
+                    Enhanced OCR - Criar Executável MANUALMENTE
+================================================================================
+
+Se o script automático não funcionou, siga estes passos manuais:
+
+📋 PRÉ-REQUISITOS
+================================================================================
+
+1. Python 3.8+ instalado
+   - Baixe de: https://www.python.org/downloads/
+   - IMPORTANTE: Marque "Add Python to PATH" durante instalação
+
+2. Arquivo OCR_Enhanced_with_Local_Processing.py na pasta
+
+🔧 PASSO A PASSO - WINDOWS
+================================================================================
+
+1. Abra o Prompt de Comando (cmd)
+   - Tecla Windows + R
+   - Digite: cmd
+   - Pressione Enter
+
+2. Navegue até a pasta do projeto
+   cd "C:\caminho\para\sua\pasta"
+
+3. Verifique se Python está instalado
+   python --version
+   
+   Se der erro, reinstale Python marcando "Add to PATH"
+
+4. Instale PyInstaller
+   pip install pyinstaller
+   
+   Se der erro, tente:
+   python -m pip install pyinstaller
+
+5. Instale dependências
+   pip install requests PyPDF2 pytesseract pdf2image Pillow
+
+6. Limpe builds anteriores (se existirem)
+   rmdir /s /q dist
+   rmdir /s /q build
+
+7. Crie o executável
+   pyinstaller --onefile --windowed OCR_Enhanced_with_Local_Processing.py
+
+8. Verifique o resultado
+   - Executável estará em: dist\OCR_Enhanced_with_Local_Processing.exe
+   - Renomeie para: Enhanced_OCR.exe (se quiser)
+
+================================================================================
+                              SOLUÇÃO DE PROBLEMAS
+================================================================================
+
+❌ "Python não é reconhecido"
+   → Reinstale Python com "Add to PATH" marcado
+   → Reinicie o computador após instalação
+
+❌ "pip não é reconhecido"
+   → Execute: python -m ensurepip --upgrade
+   → Ou use: python -m pip install pyinstaller
+
+❌ "Erro de permissão"
+   → Execute o Prompt como Administrador
+   → Clique direito no cmd → "Executar como administrador"
+
+❌ "Antivírus bloqueia"
+   → Adicione exceção na pasta do projeto
+   → Desative temporariamente durante o build
+
+❌ "Módulo não encontrado"
+   → Instale manualmente: pip install nome_do_modulo
+
+❌ "Falha no PyInstaller"
+   → Verifique se tem espaço em disco (precisa de ~500MB livres)
+   → Feche outros programas
+   → Tente versão mais simples:
+     pyinstaller --onefile OCR_Enhanced_with_Local_Processing.py
+
+================================================================================
+                            COMANDO MAIS SIMPLES
+================================================================================
+
+Se tudo mais falhar, use o comando mais básico:
+
+1. Instale só o essencial:
+   pip install pyinstaller requests PyPDF2
+
+2. Crie executável básico:
+   pyinstaller --onefile OCR_Enhanced_with_Local_Processing.py
+
+3. O arquivo ficará em: dist\OCR_Enhanced_with_Local_Processing.exe
+
+================================================================================
+                               VERIFICAÇÃO FINAL
+================================================================================
+
+Depois de criar o executável:
+
+1. Teste se funciona:
+   - Vá para pasta dist\
+   - Clique duplo no .exe
+   - Deve abrir a interface do programa
+
+2. Para OCR local funcionar:
+   - Instale Tesseract: https://github.com/UB-Mannheim/tesseract/wiki
+   - Durante instalação, marque "Add to PATH"
+
+3. Para OCR na nuvem:
+   - Tenha uma chave API da Mistral AI
+   - Configure na interface do programa
+
+================================================================================
+                            COMANDOS DE EMERGÊNCIA
+================================================================================
+
+Se NADA funcionar, tente estes comandos um por um:
+
+1. Atualizar pip:
+   python -m pip install --upgrade pip
+
+2. Instalar no modo usuário:
+   python -m pip install --user pyinstaller
+
+3. Usar versão específica:
+   python -m pip install pyinstaller==5.13.2
+
+4. Limpar cache pip:
+   python -m pip cache purge
+
+5. Instalar offline (se tiver os arquivos):
+   python -m pip install pyinstaller --no-index --find-links pasta_com_arquivos
+
+================================================================================
+                                CONTATO/AJUDA
+================================================================================
+
+Se ainda assim não funcionar:
+
+1. Verifique a versão do Python: python --version
+2. Verifique se pip funciona: pip --version
+3. Teste imports: python -c "import tkinter; print('OK')"
+4. Anote exatamente qual erro aparece
+5. Tente no Python IDLE ou outro ambiente
+
+Lembre-se: O executável final terá 50-100MB e funcionará sem Python instalado!
